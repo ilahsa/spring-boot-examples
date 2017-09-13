@@ -14,7 +14,7 @@ public class HelloController {
 	
     @RequestMapping("/hello")
 	public String hello(Locale locale, Model model) {
-		return "hello world";
+		return "Hello World";
 	}
     
     @RequestMapping("/uid")

@@ -7,14 +7,15 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.neo.Application;
 import com.neo.util.NeoProperties;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Application.class)
+@SpringBootTest(classes = Application.class)
 public class ProPertiesTest {
 
 	
@@ -33,7 +34,7 @@ public class ProPertiesTest {
     @Test
     public void testMap() throws Exception {
     	Map<String, Long> orderMinTime=new HashMap<String, Long>();
-    	long xx=orderMinTime.get("123");
+    	orderMinTime.get("123");
     }
 
 }
